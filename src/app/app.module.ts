@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -6,7 +7,6 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { CommonModule } from '@angular/common';
 import { SecondThingComponent } from './second-thing/second-thing.component';
 import { ThirdPartComponent } from './third-part/third-part.component';
-import { TimeService } from './time.service';
 
 @NgModule({
   declarations: [
@@ -16,10 +16,11 @@ import { TimeService } from './time.service';
     ThirdPartComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    CommonModule,
+    CommonModule
   ],
-  providers: [TimeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

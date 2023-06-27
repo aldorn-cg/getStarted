@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TimeService } from '../time.service';
 
-const timeServiceMock: TimeService = {
+const timeServiceMock: Partial<TimeService> = {
   getCurrentTime() {
     return 'testTimeValue'
   },
