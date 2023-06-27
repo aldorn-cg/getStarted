@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimeService } from '../time.service';
 
 @Component({
   selector: 'app-third-part',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ThirdPartComponent {
 
+  currentTime = this.timeService.getCurrentTime();
+
+  constructor(private timeService: TimeService) {
+  }
 }
