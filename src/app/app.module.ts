@@ -7,6 +7,14 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { CommonModule } from '@angular/common';
 import { SecondThingComponent } from './second-thing/second-thing.component';
 import { ThirdPartComponent } from './third-part/third-part.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', component: BookDetailsComponent},
+  {path: 'second', component: SecondThingComponent},
+  {path: 'third', component: ThirdPartComponent},
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +26,8 @@ import { ThirdPartComponent } from './third-part/third-part.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]

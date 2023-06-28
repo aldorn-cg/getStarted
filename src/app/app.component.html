@@ -1,9 +1,13 @@
 <p>Current Date in AppComponent: {{currentTime}}</p>
-
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/second" routerLinkActive="active">Second</a>
+  <a routerLink="/third" routerLinkActive="active">Third</a>
+</nav>
+<router-outlet></router-outlet>
+ 
 <p>Example GET request to catfact.ninja/fact resulted in fact: {{factAboutACat$ | async}}</p>
 
 <p>Example GET request to https://dog.ceo/api/breeds/image/random resulted in URL: {{randomDogImage$ | async}}</p>
 <img [src]="randomDogImage$ | async" height="200">
 
-<app-book-details></app-book-details>
-<app-second-thing></app-second-thing>

@@ -3,4 +3,12 @@
     border: 2px solid green;
     margin: 2px;
     padding: 2px;
+
+    nav a {
+        margin: 4px;
+    }
+
+    nav a.active {
+        font-size: 35px;
+    }
 }
